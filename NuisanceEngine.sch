@@ -191,17 +191,6 @@ F 3 "" H 5650 1700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Speaker LS1
-U 1 1 5BD80D04
-P 8700 4250
-F 0 "LS1" H 8750 4475 50  0000 R CNN
-F 1 "Speaker" H 8750 4400 50  0000 R CNN
-F 2 "Connectors_Molex:Molex_NanoFit_1x02x2.50mm_Straight" H 8700 4050 50  0001 C CNN
-F 3 "" H 8690 4200 50  0001 C CNN
-	1    8700 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VDD #PWR09
 U 1 1 5BD80D05
 P 7500 1700
@@ -635,12 +624,12 @@ $EndComp
 $Comp
 L power:GND #PWR027
 U 1 1 5BD80D37
-P 8500 4450
-F 0 "#PWR027" H 8500 4200 50  0001 C CNN
-F 1 "GND" H 8500 4300 50  0000 C CNN
-F 2 "" H 8500 4450 50  0001 C CNN
-F 3 "" H 8500 4450 50  0001 C CNN
-	1    8500 4450
+P 8500 4650
+F 0 "#PWR027" H 8500 4400 50  0001 C CNN
+F 1 "GND" H 8500 4500 50  0000 C CNN
+F 2 "" H 8500 4650 50  0001 C CNN
+F 3 "" H 8500 4650 50  0001 C CNN
+	1    8500 4650
 	-1   0    0    -1  
 $EndComp
 Text Notes 3900 1050 0    60   ~ 0
@@ -812,7 +801,7 @@ $EndComp
 Wire Wire Line
 	7150 4250 8500 4250
 Wire Wire Line
-	8500 4450 8500 4350
+	8500 4650 8500 4550
 Wire Wire Line
 	7600 2200 7600 2100
 Wire Wire Line
@@ -1492,4 +1481,26 @@ Wire Wire Line
 	8500 2350 8500 2300
 Wire Wire Line
 	8500 3000 8500 2950
+$Comp
+L Connector:Conn_01x01_Female J9
+U 1 1 5C07A97F
+P 8700 4250
+F 0 "J9" H 8700 4350 50  0000 C CNN
+F 1 "S+" H 8700 4150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8700 4250 50  0001 C CNN
+F 3 "" H 8700 4250 50  0001 C CNN
+	1    8700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J10
+U 1 1 5C07AB37
+P 8700 4550
+F 0 "J10" H 8700 4650 50  0000 C CNN
+F 1 "S-" H 8700 4450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8700 4550 50  0001 C CNN
+F 3 "" H 8700 4550 50  0001 C CNN
+	1    8700 4550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
