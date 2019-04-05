@@ -1012,13 +1012,6 @@ Wire Wire Line
 Wire Wire Line
 	7950 4450 7950 4500
 Wire Wire Line
-	9900 1600 9950 1600
-Wire Wire Line
-	9900 1800 9950 1800
-Wire Wire Line
-	9950 1800 9950 1600
-Connection ~ 9950 1600
-Wire Wire Line
 	8950 1700 9100 1700
 $Comp
 L Device:CP C10
@@ -1405,8 +1398,6 @@ Wire Wire Line
 Wire Wire Line
 	8500 5250 8550 5250
 Wire Wire Line
-	9950 1600 10400 1600
-Wire Wire Line
 	10400 1800 10400 2000
 Wire Wire Line
 	10100 1700 10400 1700
@@ -1445,4 +1436,7 @@ F 3 "~" H 10750 1660 50  0001 C CNN
 	1    10700 1700
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	9900 1600 10400 1600
+NoConn ~ 9900 1800
 $EndSCHEMATC
