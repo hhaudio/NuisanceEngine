@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:NuisanceEngine-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -30,7 +30,7 @@ L Device:C C4
 U 1 1 5BD80CF5
 P 3300 950
 F 0 "C4" H 3325 1050 50  0000 L CNN
-F 1 ".047uf" H 3325 850 50  0000 L CNN
+F 1 "0.047uf" H 3325 850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3338 800 50  0001 C CNN
 F 3 "" H 3300 950 50  0001 C CNN
 	1    3300 950 
@@ -48,7 +48,7 @@ F 3 "" H 2500 1950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Q_NPN_EBC Q1
+L Device:Q_NPN_BEC Q1
 U 1 1 5BD80CF7
 P 2600 2500
 F 0 "Q1" H 2800 2550 50  0000 L CNN
@@ -237,7 +237,7 @@ $EndComp
 Text Notes 7250 1600 0    60   ~ 0
 9V
 $Comp
-L Transistor_BJT:2N3904 Q2
+L Device:Q_NPN_BEC Q2
 U 1 1 5BD80D0B
 P 6100 1700
 F 0 "Q2" H 6300 1750 50  0000 L CNN
@@ -759,7 +759,7 @@ L Device:R R22
 U 1 1 5BDFA675
 P 7650 4450
 F 0 "R22" V 7730 4450 50  0000 C CNN
-F 1 "8-Ohm-5W" V 7550 4450 50  0000 C CNN
+F 1 "4-Ohm-5W" V 7550 4450 50  0000 C CNN
 F 2 "HammerheadAudio:Resistor_Vishay5W" V 7580 4450 50  0001 C CNN
 F 3 "" H 7650 4450 50  0001 C CNN
 	1    7650 4450
@@ -1011,8 +1011,6 @@ Wire Wire Line
 	7800 4450 7950 4450
 Wire Wire Line
 	7950 4450 7950 4500
-Wire Wire Line
-	8950 1700 9100 1700
 $Comp
 L Device:CP C10
 U 1 1 5BE02D06
@@ -1073,7 +1071,7 @@ L Device:R_POT RV5
 U 1 1 5BE070D9
 P 5000 3850
 F 0 "RV5" V 4825 3850 50  0000 C CNN
-F 1 "B10K" V 4900 3850 50  0000 C CNN
+F 1 "C10K" V 4900 3850 50  0000 C CNN
 F 2 "HammerheadAudio:Alpha_Pot_16MM" H 5000 3850 50  0001 C CNN
 F 3 "" H 5000 3850 50  0001 C CNN
 	1    5000 3850
@@ -1169,9 +1167,6 @@ F 3 "" H 8800 1700 50  0001 C CNN
 	1    8800 1700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9100 1800 9100 1700
-Connection ~ 9100 1700
 Wire Wire Line
 	8600 1700 8650 1700
 Text Notes 8450 2950 0    60   ~ 0
@@ -1308,8 +1303,6 @@ Wire Wire Line
 Wire Wire Line
 	7300 1700 7400 1700
 Wire Wire Line
-	9100 1700 9500 1700
-Wire Wire Line
 	7350 4450 7500 4450
 Wire Wire Line
 	7350 5050 7350 4450
@@ -1439,4 +1432,22 @@ $EndComp
 Wire Wire Line
 	9900 1600 10400 1600
 NoConn ~ 9900 1800
+$Comp
+L Graphic:SYM_Hot_Small #SYM1
+U 1 1 5CB9FDAB
+P 9600 6350
+F 0 "#SYM1" H 9600 6490 50  0001 C CNN
+F 1 "SYM_Hot_Small" H 9600 6225 50  0001 C CNN
+F 2 "" H 9600 6175 50  0001 C CNN
+F 3 "~" H 9630 6150 50  0001 C CNN
+	1    9600 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 1800 9100 1700
+Wire Wire Line
+	8950 1700 9100 1700
+Connection ~ 9100 1700
+Wire Wire Line
+	9100 1700 9500 1700
 $EndSCHEMATC
